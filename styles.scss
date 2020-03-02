@@ -41,6 +41,7 @@
   display: block;
   text-align: center;
 }
+
 .navDrawer {
   position: absolute;
   top: 0;
@@ -211,6 +212,7 @@
   line-height: 136%;
   color: #0b1635;
   display: block;
+  margin-top: 20px;
 }
 .howWeHelp {
   margin-top: 48px;
@@ -236,11 +238,18 @@
       }
     }
   }
-  .years {
-    margin-top: 48px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+.years {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  div {
+    margin: 40px;
+    img {
+      box-shadow: 0px 8px 14px rgba(0, 64, 148, 0.08);
+      border-radius: 12px;
+    }
   }
 }
 
