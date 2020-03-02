@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "TT Norms";
+  font-style: normal;
+  src: url(./fonts/TTNorms-Regular.ttf);
+}
+@font-face {
+  font-family: "TT Norms-Bold";
+  font-style: bold;
+  src: url(./fonts/TTNorms-Bold.ttf);
+}
+@font-face {
+  font-family: "RT Mono";
+  font-style: normal;
+  src: url(./fonts/PTMono-Regular.ttf);
+}
+
+@mixin fontStyleNormsNormal {
+  font-family: "TT Norms";
+  font-style: normal;
+}
+@mixin NormsBoldForTitles {
+  font-family: "TT Norms-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 124%;
+  /* identical to box height, or 60px */
+
+  /* Light Blue */
+
+  color: #367bf5;
+}
+@mixin menuItems {
+  @include fontStyleNormsNormal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #304b93;
+}
+@mixin centeredText {
+  display: block;
+  text-align: center;
+}
+.navDrawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 256px;
+  background: plum;
+  display: none;
+  z-index: 1;
+  transition: transform 2s;
+}
+.navSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  .hamburger {
+    display: none;
+  }
+  .logoSection {
+    display: flex;
+    margin: 10px;
+    span {
+      @include fontStyleNormsNormal;
+      font-weight: normal;
+      color: #004094;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 114%;
+      letter-spacing: 0.03em;
+      margin-left: 15px;
+    }
+  }
+  ul {
+    display: flex;
+    flex: wrap;
+    .menuLinks li {
+      list-style: none;
+      display: inline;
+      a {
+        @include menuItems;
+        text-decoration: none;
+        margin-left: 24px;
+      }
+    }
+    .menuButtons {
+      list-style: none;
+      display: inline;
+      a {
+        @include menuItems;
+        text-decoration: none;
+        margin: 10px;
+      }
+
+      background: #d6e5ff;
+      border-radius: 4px;
+      padding: 5px;
+      margin: 10px;
+    }
+  }
+}
+
+.underNavBlock {
+  background: #f5f8fa;
+  box-shadow: 0px 8px 14px rgba(0, 64, 148, 0.08);
+  width: 1300px;
+  max-width: 1300px;
+  border-radius: 20px;
+  margin-top: 30px;
+  position: relative;
+  .title {
+    font-family: "TT Norms-Bold";
+    font-style: bold;
+    font-size: 70px;
+    line-height: 124%;
+    color: #242f65;
+    position: absolute;
+    top: 72px;
+    left: 54px;
+  }
+  .mobileDescr {
+    margin-top: 16px;
+    @include fontStyleNormsNormal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 118%;
+    color: #242f65;
+    display: none;
+  }
+  .row {
+    display: flex;
+
+    .underTitle {
+      margin-left: 54px;
+      margin-top: 194px;
+      @include fontStyleNormsNormal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 134%;
+      color: #0b1635;
+
+      .wantHelpButton {
+        width: 270px;
+        height: 64px;
+        background: #367bf5;
+        border-radius: 6px;
+        color: white;
+        font-family: "PT Mono";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 134%;
+        text-transform: uppercase;
+        margin-top: 42px;
+      }
+    }
+    .video {
+      margin: 72px 54px 88px 127px;
+      video {
+        width: 580px;
+        height: 360px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  .triangle {
+    width: 6px;
+    height: 2px;
+    border-bottom: solid 6px rgb(252, 168, 14);
+    border-right: solid 6px rgb(252, 168, 14);
+    border-left: solid 6px transparent;
+    border-top: solid 6px transparent;
+    border-radius: 0 0 3px 0;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+  }
+}
+.underHelpButton {
+  @include fontStyleNormsNormal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 134%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #304b93;
+  margin-top: 12px;
+}
+.howWeHelpTitle {
+  @include NormsBoldForTitles;
+  @include centeredText;
+  margin-top: 64px;
+}
+
+.underHowWeTitle {
+  @include fontStyleNormsNormal;
+  @include centeredText;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #0b1635;
+  display: block;
+}
+.howWeHelp {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .howWeHelpList {
+    li {
+      @include fontStyleNormsNormal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 118%;
+      /* or 24px */
+
+      letter-spacing: 0.01em;
+      padding-bottom: 32px;
+      color: yellow;
+      span {
+        /* Black */
+
+        color: #0b1635;
+      }
+    }
+  }
+  .years {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navDrawer {
+  }
+  .navSection {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    height: 64px;
+    .hamburger {
+      display: block;
+      margin: 5px 20px;
+      .div1 {
+        width: 22px;
+        height: 2px;
+        background: #173c85;
+      }
+      .div2 {
+        width: 12px;
+        height: 2px;
+        margin-top: 4px;
+        background: #173c85;
+      }
+      .div3 {
+        width: 17px;
+        margin-top: 4px;
+        height: 2px;
+        background: #173c85;
+      }
+    }
+    .logoSection {
+      margin: 0;
+      margin-left: 2px;
+      img {
+        width: 26px;
+        height: 20px;
+      }
+      span {
+        display: none;
+      }
+    }
+    ul {
+      position: absolute;
+      right: 20px;
+      margin: 0;
+      .menuLinks {
+        display: none;
+      }
+      .menuButtons {
+        border-radius: unset;
+        background: unset;
+        list-style: none;
+        margin: 0 5px;
+        a {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .underNavBlock {
+    width: 100%;
+    margin-top: unset;
+    border-radius: unset;
+    .title {
+      font-size: 23px;
+      line-height: 27px;
+      letter-spacing: 0.02em;
+      position: static;
+      @include centeredText;
+      color: #004094;
+      padding-top: 28px;
+    }
+    .mobileDescr {
+      @include centeredText;
+    }
+    .row {
+      flex-direction: column;
+      .underTitle {
+        order: 1;
+        margin-top: 0;
+        margin-left: 25px;
+        margin-right: 10px;
+        padding-bottom: 20px;
+        br {
+          display: none;
+        }
+        font-size: 16px;
+        p {
+          color: #242f65;
+        }
+        .wantHelpButton {
+          width: 186px;
+          height: 48px;
+          font-size: 18px;
+          text-transform: none;
+        }
+        .triangle {
+          width: 4px;
+          height: 2px;
+          border-bottom: solid 4px rgb(252, 168, 14);
+          border-right: solid 4px rgb(252, 168, 14);
+          border-left: solid 4px transparent;
+          border-top: solid 4px transparent;
+          border-radius: 0 0 2px 0;
+          position: absolute;
+          bottom: 6px;
+          right: 6px;
+        }
+        .underHelpButton {
+          display: none;
+        }
+      }
+      .video {
+        margin: 0;
+        margin: 20px 10px;
+
+        video {
+          width: 100%;
+          height: 196;
+          height: auto;
+        }
+      }
+    }
+  }
+  .howWeHelpTitle {
+    @include NormsBoldForTitles;
+    font-size: 24px;
+  }
+
+  .underHowWeTitle {
+    display: none;
+  }
+  .howWeHelp {
+    width: 100%;
+    flex-direction: column;
+    .howWeHelpImg {
+      width: 100%;
+    }
+    .howWeHelpList {
+      width: 100%;
+      li {
+        font-size: 16px;
+        line-height: 110%;
+        /* or 24px */
+
+        letter-spacing: 0.01em;
+        padding-bottom: 32px;
+        color: yellow;
+        span {
+          /* Black */
+
+          color: #0b1635;
+        }
+      }
+    }
+  }
+}

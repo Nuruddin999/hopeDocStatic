@@ -1,0 +1,471 @@
+@font-face {
+  font-family: "TT Norms";
+  font-style: normal;
+  src: url(./fonts/TTNorms-Regular.ttf);
+}
+
+@font-face {
+  font-family: "TT Norms-Bold";
+  font-style: bold;
+  src: url(./fonts/TTNorms-Bold.ttf);
+}
+
+@font-face {
+  font-family: "RT Mono";
+  font-style: normal;
+  src: url(./fonts/PTMono-Regular.ttf);
+}
+
+.navDrawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 256px;
+  background: plum;
+  display: none;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.navSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.navSection .hamburger {
+  display: none;
+}
+
+.navSection .logoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.navSection .logoSection span {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: normal;
+  color: #004094;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 114%;
+  letter-spacing: 0.03em;
+  margin-left: 15px;
+}
+
+.navSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+  -ms-flex: wrap;
+  flex: wrap;
+}
+
+.navSection ul .menuLinks li {
+  list-style: none;
+  display: inline;
+}
+
+.navSection ul .menuLinks li a {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #304b93;
+  text-decoration: none;
+  margin-left: 24px;
+}
+
+.navSection ul .menuButtons {
+  list-style: none;
+  display: inline;
+  background: #d6e5ff;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.navSection ul .menuButtons a {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #304b93;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.underNavBlock {
+  background: #f5f8fa;
+  -webkit-box-shadow: 0px 8px 14px rgba(0, 64, 148, 0.08);
+  box-shadow: 0px 8px 14px rgba(0, 64, 148, 0.08);
+  width: 1300px;
+  max-width: 1300px;
+  border-radius: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.underNavBlock .title {
+  font-family: "TT Norms-Bold";
+  font-style: bold;
+  font-size: 70px;
+  line-height: 124%;
+  color: #242f65;
+  position: absolute;
+  top: 72px;
+  left: 54px;
+}
+
+.underNavBlock .mobileDescr {
+  margin-top: 16px;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 118%;
+  color: #242f65;
+  display: none;
+}
+
+.underNavBlock .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.underNavBlock .row .underTitle {
+  margin-left: 54px;
+  margin-top: 194px;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 134%;
+  color: #0b1635;
+}
+
+.underNavBlock .row .underTitle .wantHelpButton {
+  width: 270px;
+  height: 64px;
+  background: #367bf5;
+  border-radius: 6px;
+  color: white;
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 134%;
+  text-transform: uppercase;
+  margin-top: 42px;
+}
+
+.underNavBlock .row .video {
+  margin: 72px 54px 88px 127px;
+}
+
+.underNavBlock .row .video video {
+  width: 580px;
+  height: 360px;
+  border-radius: 12px;
+}
+
+.underNavBlock *,
+.underNavBlock *:before,
+.underNavBlock *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.underNavBlock .triangle {
+  width: 6px;
+  height: 2px;
+  border-bottom: solid 6px #fca80e;
+  border-right: solid 6px #fca80e;
+  border-left: solid 6px transparent;
+  border-top: solid 6px transparent;
+  border-radius: 0 0 3px 0;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+
+.underHelpButton {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 134%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #304b93;
+  margin-top: 12px;
+}
+
+.howWeHelpTitle {
+  font-family: "TT Norms-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 124%;
+  /* identical to box height, or 60px */
+  /* Light Blue */
+  color: #367bf5;
+  display: block;
+  text-align: center;
+  margin-top: 64px;
+}
+
+.underHowWeTitle {
+  font-family: "TT Norms";
+  font-style: normal;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #0b1635;
+  display: block;
+}
+
+.howWeHelp {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.howWeHelp .howWeHelpList li {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 118%;
+  /* or 24px */
+  letter-spacing: 0.01em;
+  padding-bottom: 32px;
+  color: yellow;
+}
+
+.howWeHelp .howWeHelpList li span {
+  /* Black */
+  color: #0b1635;
+}
+
+.howWeHelp .years {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .navSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    height: 64px;
+  }
+  .navSection .hamburger {
+    display: block;
+    margin: 5px 20px;
+  }
+  .navSection .hamburger .div1 {
+    width: 22px;
+    height: 2px;
+    background: #173c85;
+  }
+  .navSection .hamburger .div2 {
+    width: 12px;
+    height: 2px;
+    margin-top: 4px;
+    background: #173c85;
+  }
+  .navSection .hamburger .div3 {
+    width: 17px;
+    margin-top: 4px;
+    height: 2px;
+    background: #173c85;
+  }
+  .navSection .logoSection {
+    margin: 0;
+    margin-left: 2px;
+  }
+  .navSection .logoSection img {
+    width: 26px;
+    height: 20px;
+  }
+  .navSection .logoSection span {
+    display: none;
+  }
+  .navSection ul {
+    position: absolute;
+    right: 20px;
+    margin: 0;
+  }
+  .navSection ul .menuLinks {
+    display: none;
+  }
+  .navSection ul .menuButtons {
+    border-radius: unset;
+    background: unset;
+    list-style: none;
+    margin: 0 5px;
+  }
+  .navSection ul .menuButtons a {
+    margin: 0;
+  }
+  .underNavBlock {
+    width: 100%;
+    margin-top: unset;
+    border-radius: unset;
+  }
+  .underNavBlock .title {
+    font-size: 23px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    position: static;
+    display: block;
+    text-align: center;
+    color: #004094;
+    padding-top: 28px;
+  }
+  .underNavBlock .mobileDescr {
+    display: block;
+    text-align: center;
+  }
+  .underNavBlock .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .underNavBlock .row .underTitle {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-top: 0;
+    margin-left: 25px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  .underNavBlock .row .underTitle br {
+    display: none;
+  }
+  .underNavBlock .row .underTitle p {
+    color: #242f65;
+  }
+  .underNavBlock .row .underTitle .wantHelpButton {
+    width: 186px;
+    height: 48px;
+    font-size: 18px;
+    text-transform: none;
+  }
+  .underNavBlock .row .underTitle .triangle {
+    width: 4px;
+    height: 2px;
+    border-bottom: solid 4px #fca80e;
+    border-right: solid 4px #fca80e;
+    border-left: solid 4px transparent;
+    border-top: solid 4px transparent;
+    border-radius: 0 0 2px 0;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+  }
+  .underNavBlock .row .underTitle .underHelpButton {
+    display: none;
+  }
+  .underNavBlock .row .video {
+    margin: 0;
+    margin: 20px 10px;
+  }
+  .underNavBlock .row .video video {
+    width: 100%;
+    height: 196;
+    height: auto;
+  }
+  .howWeHelpTitle {
+    font-family: "TT Norms-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 124%;
+    /* identical to box height, or 60px */
+    /* Light Blue */
+    color: #367bf5;
+    font-size: 24px;
+  }
+  .underHowWeTitle {
+    display: none;
+  }
+  .howWeHelp {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .howWeHelp .howWeHelpImg {
+    width: 100%;
+  }
+  .howWeHelp .howWeHelpList {
+    width: 100%;
+  }
+  .howWeHelp .howWeHelpList li {
+    font-size: 16px;
+    line-height: 110%;
+    /* or 24px */
+    letter-spacing: 0.01em;
+    padding-bottom: 32px;
+    color: yellow;
+  }
+  .howWeHelp .howWeHelpList li span {
+    /* Black */
+    color: #0b1635;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
